@@ -19,7 +19,7 @@ import reactor.core.publisher.Mono;
 
 @RequestMapping("productcredt")
 @RestController
-public class ProductBankController {
+public class ProductCreditController {
 	
 	@Autowired
 	private  ProductCreditService prodcredtserv;

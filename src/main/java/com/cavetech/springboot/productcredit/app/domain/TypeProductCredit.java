@@ -14,10 +14,13 @@ public @Data class TypeProductCredit {
 	@Id
 	private String id;
 	private String description;
-	public TypeProductCredit(String description) {
+	private int valtip;
+	public TypeProductCredit(String description, int valtip) {
 		super();
 		this.description = description;
+		this.valtip = valtip;
 	}
+
 	
 
 }
