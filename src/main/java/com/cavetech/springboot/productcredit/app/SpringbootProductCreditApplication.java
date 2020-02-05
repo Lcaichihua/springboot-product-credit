@@ -52,10 +52,10 @@ public class SpringbootProductCreditApplication  implements CommandLineRunner{
 		Flux.just(type)
 		.flatMap(tipP -> typeprodcredt.save(tipP))
 		.thenMany(	
-				Flux.just(new ProductCredit("Cuenta de credito personal" ,2.50,  type),
-						  new ProductCredit("Cuenta de credito empresarial" ,2.00,  type),
-						  new ProductCredit("Cuents d creditos " ,0.00,  type) ,
-						  new ProductCredit("Cuents d creditos " ,0.00,  type) 
+				Flux.just(new ProductCredit("Cuenta de credito personal" ,0.00,  type,1),
+						  new ProductCredit("Cuenta de credito empresarial" ,0.00,  type,2),
+						  new ProductCredit("Tarjeta de credito" ,0.00,  type,3) ,
+						  new ProductCredit("Adelanto de efectivo " ,0.00,  type,4) 
 					)	
 				).flatMap(pro -> productbank.save(pro))
 		.subscribe(res -> System.out.println("Producto".concat(res.toString().concat(" " + "Registrado"))));

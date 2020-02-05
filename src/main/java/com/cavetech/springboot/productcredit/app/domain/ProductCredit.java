@@ -17,14 +17,17 @@ public  @Data  class ProductCredit {
 	private String description;
 	private double interes;
 	private TypeProductCredit typeProductCredit;
-	
-
-	public ProductCredit(String description, double interes, TypeProductCredit typeProductCredit) {
+	private Integer codigo;
+	public ProductCredit(String description, double interes, TypeProductCredit typeProductCredit, Integer codigo) {
 		super();
 		this.description = description;
 		this.interes = interes;
 		this.typeProductCredit = typeProductCredit;
+		this.codigo = codigo;
 	}
+	
+
+	
 	
 	
 }
